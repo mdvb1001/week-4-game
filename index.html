@@ -1,14 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>JS Game</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  	<script type="text/javascript" src="assets/javascript/library.js"></script>
-  	<script type="text/javascript" src="assets/javascript/game.js"></script>
+    <meta charset="UTF-8">
+    <title>JS Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script type="text/javascript" src="assets/javascript/library.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-	
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4 pull-left">
+                <!-- div 1 -->
+                <div id="title" class="panel panel-default" style="height: 75px;">
+                    <div id="title-card" class="panel-body">
+                        Crystals_Collector!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6 pull-left">
+                <!-- div 2 Jumbotron -->
+                <div id="manuel" class="panel panel-default" style="height: 250px;">
+                    <div class="panel-body">
+                        <p>You will be given a random number at the start of the game.</p>
+                        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                        <p>You win the game by matching your total score to the random number. You lose the game if you total score goes above the random number.</p>
+                        <p>The value of each crystal is hidden from you until you click on it.</p>
+                        <p>Each time the game starts, the game will change the values of the crystals.</p>
+                        <p>GOOD LUCK!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3 pull left">
+                <!-- div 3 -->
+                <div id="goal" class="panel panel-default" style="height: 100px;">
+                    <div class="panel-body">
+                        Basic panel 3
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2 pull left">
+                <!-- div 4 -->
+                <div id="win-lose" class="panel panel-default" style="height: 100px;">
+                    <div class="panel-body">
+                        Basic panel 4
+                        <br> Basic panel
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <!-- div 5: Button1 button2 button3 button4  -->
+                <p>
+                    <a href="#" class="btn btn-sq btn-default">
+                        <i class="fa fa-user fa-5x"></i>
+                        <img src="assets/images/crystal-1.png" />
+                        <br/>
+                    </a>
+                    <a href="#" class="btn btn-sq btn-default">
+                        <i class="fa fa-user fa-5x"></i>
+                        <img src="assets/images/crystal-2.png" />
+                    </a>
+                    <a href="#" class="btn btn-sq btn-default">
+                        <i class="fa fa-user fa-5x"></i>
+                        <img src="assets/images/crystal-3.png" />
+                    </a>
+                    <a href="#" class="btn btn-sq btn-default">
+                        <i class="fa fa-user fa-5x"></i>
+                        <img src="assets/images/crystal-4.png" />
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3 pull left">
+                <!-- div 6 -->
+                <div id="total-title" class="panel panel-default" style="height: 50px;">
+                    <div class="panel-body">
+                        Basic panel 6
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <!-- div 7 -->
+                <div id="total-score" class="panel panel-default" style="height: 100px;">
+                    <div class="panel-body">
+                        Basic panel 7
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
