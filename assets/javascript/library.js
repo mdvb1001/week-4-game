@@ -1,251 +1,50 @@
-$(document).ready(function() {
-    console.log("ready!");
 
+// PHASE 1: UI STUFF
+
+// Create the layout of the html page:
+// Header: "CrystalsCollector" around a 1/3 of the page 
+// Jumbotron with instruction inside, around 1/2 of the page 
+// A div #numGl of about 1/4, and another smaller div around a 1/12
+// 4 Buttons for the crystals themselves 
+// a skin div, 1/4 of the page 
+// An identitical div to #numGoal in size for #numUser 
+// All these divs should add up to the height of the html page
+
+// Bootstrap theme: something simple, easy
+// colors can be done with CSS 
+// Background: find something funky and funny 
+// Find images for the crystals
+
+
+
+
+// PHASE 2: ONCLICK STUFF
+// 
+// Fridge game seems to be important to look at.
+// 3 things to ask Joe: (1) Git hub branches
+//                      (2) Data-let in fridge exercise
+//                      (3) Bootstrap.css not working 
+// 
+// We need an onclick function!
+
+//  > each Crystal Button needs to be assigned a Random Num // look at 'Flip a coin' file
+//      > perhaps we start by hardcoding this!
+//  > a random num needs to be assigned to "goal"
+//      > perhaps we start by hardcoding this!
+//  > when user clicks on a button: display result in "display"
+//  > then, compound all subsequent clicks/results 
+//  http://stackoverflow.com/questions/460172/how-do-i-add-an-integer-value-with-javascript-jquery-to-a-value-thats-returni
+//  http://stackoverflow.com/questions/2970196/use-jquery-to-keep-adding-numbers-to-a-variable-on-click
+//
+// PHASE 3: HOW IT CHANGES THE HTML  
+// Look at calculator 
+// look at Flip a coin 
+
+
+// PHASE 4: WIN OR LOSE
+// When userScore => goalScore, then Reset Game 
+//  if userScore === goalScore, then wins++ and display in "win-lose" > win:
+//  if userScore > goalScore, then loses++ and displau in "win-loss" > lose;
+// 
 
-    var random = '';
-    var guess = [];
-    var wins = 0;
-    var loses = 0;
-    var result = 0; // sum of all the guesses
 
-    function playGame() {
-
-        guess = new Array(4);
-        for (var i = 0; i < guess.length; i++) {
-            guess[i] = 1 + Math.floor((Math.random() * 12));
-            console.log(guess[i]);
-        };
-
-        console.log('this is the guess' + guess);
-        random = 18 + Math.floor((Math.random() * 120));
-        console.log(random);
-
-
-
-        //    for (var i = 0; i < guess.length; i++) {
-        // 	    var b= $('<button>');
-        // 	    b.html(randomCrystalNumber[i]);
-        // 	    b.addClass('btn btn-sq btn-default');
-        // 	    b.attr('data-let', randomCrystalNumber[i]);
-        // 	    console.log(b);
-        // };
-
-        // $('.btn-default').on('click', function() {
-        //         for (var i = 0; i < guess.length; i++) {
-
-        //             var button = guess[i];
-
-        //             console.log('this button:' + button);
-
-        //             // button.addClass('btn btn-sq btn-default');
-        //             // button.attr('data-let', guess[i]);
-
-        //         };
-        //         result += guess[i];
-        //         console.log('result:' + result);
-
-        // });
-
-        //     $('btn-default').text($(this).data('let'));
-
-        //     $('#score').html('Your score:' + result);
-
-        // });
-
-
-
-        $('#goalNum').html('Your goal:' + ' ' + random);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // if (loses++ || wins++) {
-        // 	random;
-        // 	guess;
-        // 	result = 0;
-        // }else{ };
-
-    };
-    playGame();
-
-    function reset() {
-        random = '';
-        $('#goalNum').html('Your goal:' + ' ' + random);
-        result = 0;
-        $('#score').html('Your score:' + ' ' + result);
-        playGame();
-
-    }
-
-    $('#crystal-1').on('click', function() {
-        // blueCrytal = randomCrystalNumber[0];
-        // console.log(blueCrytal);
-        // var button = guess[0];
-        // console.log(button);
-        $('#expression').html('');
-        result += guess[0];
-        console.log(result);
-        $('#score').html('Your score:' + ' ' + result);
-
-        if (random === result) {
-            wins++;
-            $('#expression').html('You Win!');
-            $('#userWins').html('Wins:' + ' ' + wins);
-            reset();
-
-            // random = 0;
-            // $('#goal').html('Your goal:' + ' ' + random);
-            // result = 0;
-            // $('#score').html('Your score:' + ' ' + result);
-
-
-
-        } else if (result > random) {
-            loses++;
-            $('#expression').html('You lose!');
-            $('#userLoses').html('Loses:' + ' ' + loses);
-            reset();
-
-            // random = 0;
-            // $('#goal').html('Your goal:' + ' ' + random);
-            // result = 0;
-            // $('#score').html('Your score:' + ' ' + result);
-
-
-
-        }
-
-    });
-
-    $('#crystal-2').on('click', function() {
-        // blueCrytal = randomCrystalNumber[0];
-        // console.log(blueCrytal);
-        // var button = guess[1];
-        // console.log(button);
-        $('#expression').html('');
-        result += guess[1];
-        console.log(result);
-        $('#score').html('Your score:' + ' ' + result);
-
-        if (random === result) {
-            wins++;
-            $('#expression').html('You Win!');
-            $('#userWins').html('Wins:' + ' ' + wins);
-            reset();
-            // random = 0;
-            // $('#goal').html('Your goal:' + ' ' + random);
-            // result === 0;
-            // $('#score').html('Your score:' + ' ' + result);
-            // playGame();
-
-
-        } else if (result > random) {
-            loses++;
-            $('#expression').html('You lose!');
-            $('#userLoses').html('Loses:' + ' ' + loses);
-            reset();
-
-            // random = 0;
-            // $('#goal').html('Your goal:' + ' ' + random);
-            // result === 0;
-            // $('#score').html('Your score:' + ' ' + result);
-            // playGame();
-        }
-
-    });
-
-    $('#crystal-3').on('click', function() {
-        // blueCrytal = randomCrystalNumber[0];
-        // console.log(blueCrytal);
-        // var button = guess[2];
-        // console.log(button);
-        $('#expression').html('');
-        result += guess[2];
-        console.log(result);
-        $('#score').html('Your score:' + ' ' + result);
-
-        if (random === result) {
-            wins++;
-            $('#expression').html('You Win!');
-            $('#userWins').html('Wins:' + ' ' + wins);
-            reset();
-
-            // random = 0;
-            // $('#goal').html('Your goal:' + ' ' + random);
-            // result = 0;
-            // $('#score').html('Your score:' + ' ' + result);
-            // playGame();
-
-
-        } else if (result > random) {
-            loses++;
-            $('#expression').html('You lose!');
-            $('#userLoses').html('Loses:' + ' ' + loses);
-            reset();
-
-            // guess = new Array(0);
-            // random = 0;
-            // $('#goal').html('Your goal:' + ' ' + random);
-            // result = 0;
-            // $('#score').html('Your score:' + ' ' + result);
-            // playGame();
-        }
-
-    });
-
-    $('#crystal-4').on('click', function() {
-        // blueCrytal = randomCrystalNumber[0];
-        // console.log(blueCrytal);
-        // var button = guess[3];
-        // console.log(button);
-        $('#expression').html('');
-        result += guess[3];
-        console.log(result);
-        $('#score').html('Your score:' + ' ' + result);
-
-        if (random === result) {
-            wins++;
-            $('#expression').html('You Win!');
-            $('#userWins').html('Wins:' + ' ' + wins);
-            reset();
-
-            // random = 0;
-            // $('#goal').html('Your goal:' + ' ' + random);
-            // result = 0;
-            // $('#score').html('Your score:' + ' ' + result);
-            // playGame();
-
-
-        } else if (result > random) {
-            loses++;
-            $('#expression').html('You lose!');
-            $('#userLoses').html('Loses:' + ' ' + loses);
-            reset();
-
-            // guess = new Array(0);
-            // random = 0;
-            // $('#goal').html('Your goal:' + ' ' + random);
-            // result = 0;
-            // $('#score').html('Your score:' + ' ' + result);
-            // playGame();
-        }
-
-    });
-
-    // function checkWinsOrLoses() {
-
-
-    // };
-    // checkWinsOrLoses();
-
-});
