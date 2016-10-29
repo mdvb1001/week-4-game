@@ -214,7 +214,7 @@ $(document).ready(function() {
 
         function reset() {
             random = 0;
-            $('#goal').html('Your goal:' + ' ' + random);
+            $('#goalNum').html('Your goal:' + ' ' + random);
             result = 0;
             $('#score').html('Your score:' + ' ' + result);
             playGame();
