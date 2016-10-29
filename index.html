@@ -3,14 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JS Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/javascript/library.js"></script>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-6 pull-left">
                 <!-- div 2 Jumbotron -->
-                <div id="manuel" class="panel panel-default" style="height: 250px;">
+                <div id="manuel" class="panel panel-default" style="height: 350px;">
                     <div class="panel-body">
                         <p>You will be given a random number at the start of the game.</p>
                         <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
@@ -45,7 +46,7 @@
                 <!-- div 3 -->
                 <div id="goal" class="panel panel-default" style="height: 100px;">
                     <div class="panel-body">
-                        Basic panel 3
+                        <p id="goalNum"></p>
                     </div>
                 </div>
             </div>
@@ -53,8 +54,10 @@
                 <!-- div 4 -->
                 <div id="win-lose" class="panel panel-default" style="height: 100px;">
                     <div class="panel-body">
-                        Basic panel 4
-                        <br> Basic panel
+                        <p id="expression">
+                            <p>
+                                <p id="userWins">Wins:</p>
+                                <p id="userLoses">Loses:</p>
                     </div>
                 </div>
             </div>
@@ -63,20 +66,20 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <!-- div 5: Button1 button2 button3 button4  -->
                 <p>
-                    <a href="#" class="btn btn-sq btn-default">
+                    <a id="crystal-1" class="btn btn-sq btn-default">
                         <i class="fa fa-user fa-5x"></i>
                         <img src="assets/images/crystal-1.png" />
                         <br/>
                     </a>
-                    <a href="#" class="btn btn-sq btn-default">
+                    <a id="crystal-2" class="btn btn-sq btn-default">
                         <i class="fa fa-user fa-5x"></i>
                         <img src="assets/images/crystal-2.png" />
                     </a>
-                    <a href="#" class="btn btn-sq btn-default">
+                    <a id="crystal-3" class="btn btn-sq btn-default">
                         <i class="fa fa-user fa-5x"></i>
                         <img src="assets/images/crystal-3.png" />
                     </a>
-                    <a href="#" class="btn btn-sq btn-default">
+                    <a id="crystal-4" class="btn btn-sq btn-default">
                         <i class="fa fa-user fa-5x"></i>
                         <img src="assets/images/crystal-4.png" />
                     </a>
@@ -88,7 +91,7 @@
                 <!-- div 6 -->
                 <div id="total-title" class="panel panel-default" style="height: 50px;">
                     <div class="panel-body">
-                        Basic panel 6
+                        Your total score is:
                     </div>
                 </div>
             </div>
@@ -96,9 +99,9 @@
         <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-3">
                 <!-- div 7 -->
-                <div id="total-score" class="panel panel-default" style="height: 100px;">
+                <div id="display" class="panel panel-default" style="height: 100px;">
                     <div class="panel-body">
-                        Basic panel 7
+                        <p id="score">Your score: 0</p>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@ body {
 }
 
 .panel-body {
-  font-size: 10px;
+  font-size: 15px;
   padding: 0px;
 }
 
@@ -53,6 +53,6 @@ img {
   background: #33a194;
 }
 
-#total-score {
+#display {
   background: #33a194;
 }
